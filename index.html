@@ -207,14 +207,13 @@ input:focus,select:focus,textarea:focus{outline:none}
 /* ================================================================
    DATABASE AWAL (db.json)
    ================================================================ */
-var DB_CONFIG = {
-  owner: 'username-kamu',      // filedata
-  repo: 'repo-kamu',           // ecosportokutimur-blip/filedata
-  branch: 'main',              // 'main'
-  file: 'db.json',
-  token: ''                    // Kosongkan dulu
+var DEFAULT_DB = {
+  pelanggan: [], produk: [], pesanan: [], perekapan: [],
+  admins: [
+    { id:'sa_root', username:'superadmin', password:'super123', nama:'Super Admin', role:'superadmin', active:true, createdAt:'2025-01-01T00:00:00.000Z' },
+    { id:'sa_def',  username:'admin',      password:'admin123', nama:'Admin',       role:'admin',     active:true, createdAt:'2025-01-01T00:00:00.000Z' }
+  ]
 };
-
 /* ===== STATE ===== */
 var APP = { data:null, page:'dashboard', charts:{}, theme:'light', isLoggedIn:false, selectedNotaId:null, userRole:null, notaSettings:{ namaToko:'Eco Sport Jersey', alamatToko:'Jl. Olahraga No. 88, Bandung', telpToko:'0812-3456-7890', emailToko:'info@ecosportjersey.com', showStamp:true, showQR:true, notaType:'invoice' } };
 
